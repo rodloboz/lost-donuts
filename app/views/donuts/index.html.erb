@@ -1,0 +1,17 @@
+<h1>List of Donuts</h1>
+
+
+<ul>
+<% @donuts.each do |donut| %>
+<li>
+  <%= link_to donut_path(donut) do  %>
+    <%=donut.flavour.capitalize %>
+    <%=donut.shape.capitalize %>
+    <%=donut.price%>€
+  <% end %>
+</li>
+<% end %>
+</ul>
+
+
+<%= link_to "Add a Donut", new_donut_path %>

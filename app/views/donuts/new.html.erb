@@ -1,0 +1,15 @@
+<h1>Add a Donut</h1>
+
+<%= form_for @donut do |f| %>
+  <div>
+    <%= f.text_field :flavour %>
+  </div>
+  <div>
+    <%= f.select :shape, Donut::SHAPES %>
+  </div>
+  <div>
+    <%= f.number_field :price %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
