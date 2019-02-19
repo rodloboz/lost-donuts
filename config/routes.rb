@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   # "donuts/new" => id: new
   get "donuts/new", to: "donuts#new", as: :new_donut
   get "donuts/:id", to: "donuts#show", as: :donut
+
+  # resources :donuts, only: [:index, :show, :new, :create]
 end
